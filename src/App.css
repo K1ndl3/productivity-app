@@ -1,0 +1,20 @@
+
+.app {
+  display: flex;
+  flex-direction: row;
+  border: solid;
+  width: 100vw;
+  height: 66vh;
+  margin-right: 20px;
+  border: solid;
+}
+
+.main-content {
+  display: flex;
+  border: solid;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  margin-left: 30px;
+}
+

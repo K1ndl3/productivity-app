@@ -1,0 +1,54 @@
+body{
+    background-color: rgba(222, 217, 217, 0.148);
+}
+
+.sidebar.extend {
+    border-right: 2px grey solid;
+    border-bottom: 2px grey solid;
+    height: 60vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: rgb(153, 146, 146);
+    position: absolute;
+}
+
+.extend-button {
+    align-self: flex-end;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(214, 213, 213);
+    transition: background-color .2s ease;
+    padding-top: 0;
+    margin-top: 6px;
+}
+
+.extend-button:hover {
+    background-color: rgb(154, 153, 153);
+    transform: scale(1.1);
+}
+
+.selected-app {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.selected-app button{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(214, 213, 213);
+    transition: background-color .3s ease;
+}
+
+.selected-app button:hover {
+    background-color: rgb(154, 153, 153);
+    transform: scale(1.05);
+}
+
