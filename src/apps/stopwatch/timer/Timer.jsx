@@ -1,12 +1,38 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './Timer.css'
 
 function Timer() {
 
     const [minutes, setMinutes] = useState('');
+    const [isRunning, setIsRunning] = useState(false);
+    const [timeLeft, setTimeLeft] = useState(0);
+    const intervalID = useRef(null);
+
+    useEffect(() => {
+        if (isRunning) {
+            intervalID.current = setInterval(setTimeLeft(prev = prev - 10) ,10)
+        } else {
+            clearInterval(intervalID.current);
+        }
+
+        return () => clearInterval(intervalID.current);
+    }
+    ,[isRunning])
 
     const handleInput = (event) => {
         setMinutes(event.target.value);
+    }
+
+    const setTimer = () => {
+        setTimeLeft(Number(minutes));
+    }
+    
+    const startTimer = () => {
+        setIsRunning(true);
+    }
+
+    const displayTimer = () => {
+        
     }
 
     return (<>
@@ -18,7 +44,7 @@ function Timer() {
                    value={minutes}
                     onChange={(e) => handleInput(e)}
                    />
-            <button className="input-button">Enter</button>
+            <button className="input-button" onClick={() => setTimer()}>Enter</button>
             </div>
             <div className="display">00:00:00</div>
             <div className="buttons">

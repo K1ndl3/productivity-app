@@ -4,7 +4,7 @@ import StopWatch from './apps/stopwatch/Stopwatch';
 import MainContent from './components/Main-content/Main-content';
 import './App.css'
 function App() {
-  const [app, setApp] = useState("stop-watch");
+  const [app, setApp] = useState("timer");
   console.log(app);
   return (<>
   <div className="app">

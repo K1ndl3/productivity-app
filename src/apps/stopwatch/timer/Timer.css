@@ -75,7 +75,7 @@
     width: 45px;
     border: none;
     border-radius: 20px;
-    transition: background-color .1s ease-in;
+    transition: background-color .1s ease;
     cursor: pointer;
 }
 
@@ -96,6 +96,6 @@
 }
 
 .timer-component .reset-button:hover:active {
-    background-color: rgb(46, 56, 144);
+    background-color: rgb(30, 51, 241);
     transform: scale(.95);
 }
