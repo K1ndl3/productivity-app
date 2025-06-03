@@ -45,6 +45,7 @@
     border-radius: 10px;
     transition: background-color .2s ease;
     transition: font-color .2s ease;
+    cursor: pointer;
 }
 
 .stop-watch-component button:hover {

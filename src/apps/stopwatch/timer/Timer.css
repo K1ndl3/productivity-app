@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.timer-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 50%;
+    border: thin;
+    width: 50%;
+    background-color: hsl(226, 66%, 84%);
+    border-radius: 60px;
+}
+
+.timer-component .input-field {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 3px;
+}
+
+.timer-component .input-button {
+    border: none;
+    background-color: rgb(148, 148, 207);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color .2s ease;
+    font-size: 10px;
+}
+
+.timer-component .input-button:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 0, 174);
+}
+
+.timer-component .input-button:active {
+    transform: scale(.95);
+    background-color: rgb(3, 3, 80);
+}
+
+.timer-component .timer-input {
+    border: 1px grey solid;
+    border-radius: 8px;
+    width: 120px;
+    font-weight: 200;
+    font-size: small;
+}
+
+.timer-component .display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    width: 80px;
+    height: 30px;
+}
+
+
+.timer-component .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    gap: 5px;
+}
+
+.timer-component .buttons button{
+    background-color: rgb(148, 148, 207);
+    height: 100%;
+    width: 45px;
+    border: none;
+    border-radius: 20px;
+    transition: background-color .1s ease-in;
+    cursor: pointer;
+}
+
+.timer-component .buttons button:hover {
+    background-color: rgb(93, 93, 139);
+    transform: scale(1.1);
+}
+
+
+.timer-component .stop-button:hover:active {
+    background-color: red;
+    transform: scale(.95);
+}
+
+.timer-component .start-button:hover:active {
+    background-color: rgb(97, 210, 79);
+    transform: scale(.95);
+}
+
+.timer-component .reset-button:hover:active {
+    background-color: rgb(46, 56, 144);
+    transform: scale(.95);
+}

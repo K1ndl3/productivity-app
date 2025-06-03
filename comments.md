@@ -22,3 +22,8 @@ Project Goal
         - wow that means I have to adjust the css
         - the problem could have been prevented if I did not use App.jsx as my root element
         - Now i need to pass the classNames as the props for the components which are new concepts that I have not learned yet.
+    - finished with the stop watch functionality of the app
+        - I have some regrets about the styling of the stop watch
+        - It honestly feels too rushed an too barebones. We may need to update the design later
+    - starting on the Timer functionality now
+
