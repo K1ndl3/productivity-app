@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.stop-watch-component {
+    border: 1px solid rgb(96, 93, 93);
+    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(223, 218, 218);
+}
+
+
+
+.stop-watch-component .display {
+    border: 1px solid rgb(186, 183, 183);
+    border-radius: 10px;
+    height: 60px;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font: Outfit;
+    font-size: 20px;
+    padding: 3px;
+    background-color: rgba(232, 237, 237, 0.544);
+}
+
+
+.stop-watch-button {
+    display: flex;
+    gap: 4px;
+}
+
+.stop-watch-component button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: rgba(232, 237, 237, 0.544);
+    border-radius: 10px;
+    transition: background-color .2s ease;
+    transition: font-color .2s ease;
+}
+
+.stop-watch-component button:hover {
+    transform: scale(1.05);
+    background-color: rgba(232, 237, 237, 0.516);
+    color: azure;
+}
+
+.stop-watch-component button:active {
+    transform: scale(.90);
+    background-color: rgba(10, 10, 10, 0.137);
+}
