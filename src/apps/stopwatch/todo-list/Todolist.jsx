@@ -1,53 +1,51 @@
-import { useState } from 'react';
-
+import { useState } from "react";
+import "./Todolist.css"
 
 function TodoList() {
-  const [tasks, setTasks] = useState([]);
-  const [input, setInput] = useState('');
 
-  const addTask = () => {
-    if (input.trim()) {
-      setTasks([{ text: input, done: false }, ...tasks]);
-      setInput('');
+  const [taskArray, setTaskArray] = useState(["list1", "list2", "list3"]);
+  const [taskInput, setTaskInput] = useState('');
+
+  const moveTaskUp = (index) => {
+
+    if (index > 0) {
+    const newArr = [...taskArray];
+    [newArr[index], newArr[index - 1]] = [newArr[index - 1], newArr[index]];
+    setTaskArray(newArr);
     }
-  };
+  }
 
-  const toggleDone = (index) => {
-    const updated = [...tasks];
-    updated[index].done = !updated[index].done;
-    setTasks(updated);
-  };
+  const moveTaskDown = (index) => {
+    if (index < taskArray.length - 1) {
+      const newArr =[...taskArray];
+      [newArr[index +  1], newArr[index]] = [newArr[index], newArr[index + 1]];
+      return (setTaskArray(newArr));
+    }
+  }
 
-  const removeTask = (index) => {
-    const updated = tasks.filter((_, i) => i !== index);
-    setTasks(updated);
-  };
-
-  return (
-    <div className="todo-wrapper">
-      <div className="todo-card">
-        <h2 className="title">📋 My Tasks</h2>
-        <div className="input-area">
-          <input
-            type="text"
-            value={input}
-            placeholder="What's next?"
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && addTask()}
-          />
-          <button onClick={addTask}>＋</button>
-        </div>
-        <ul className="task-list">
-          {tasks.map((task, index) => (
-            <li key={index} className={`task ${task.done ? 'done' : ''}`}>
-              <span onClick={() => toggleDone(index)}>{task.text}</span>
-              <button className="remove" onClick={() => removeTask(index)}>✕</button>
-            </li>
-          ))}
-        </ul>
+  return ( <>
+      <div className="todolist">
+          <h1 className="title">My To-Do List</h1>
+          <div className="input-field">
+            <input type="text" className="input-text" placeholder="What's next?" value={taskInput} onChange={(e) =>  setTaskInput(e.target.value)}/>
+            <button className="input-button">Enter</button>
+          </div>
+          <ul className="list" style={{listStyleType: 'number'}}>
+            {taskArray.map((value, index) => {
+              return (
+                      <span className="element-display-container">
+                        <div className="element-button">
+                          <button className="up-button" onClick={() => moveTaskUp(index)}>up</button>
+                          <button className="down-button" onClick={() => moveTaskDown(index)}>down</button>
+                        </div>
+                        <li className="items" key={index}>{value}</li>
+                        <button className="finish-button">done</button>  
+                      </span>
+              )
+            })}
+          </ul>
       </div>
-    </div>
-  );
+  </>)
 }
 
 export default TodoList;

@@ -1,4 +1,4 @@
-import StopWatch from "../../apps/stopwatch/Stopwatch"
+import StopWatch from "../../apps/stopwatch/stopwatch/Stopwatch"
 import Timer from "../../apps/stopwatch/timer/Timer"
 import TodoList from "../../apps/stopwatch/todo-list/Todolist"
 function MainContent({app, className}) {

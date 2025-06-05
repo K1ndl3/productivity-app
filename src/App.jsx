@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
-import StopWatch from './apps/stopwatch/Stopwatch';
 import MainContent from './components/Main-content/Main-content';
 import './App.css'
 function App() {
-  const [app, setApp] = useState("timer");
+  const [app, setApp] = useState("todo-list");
   console.log(app);
   return (<>
   <div className="app">
